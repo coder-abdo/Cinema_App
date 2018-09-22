@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Cinema APP
+        link(rel="stylesheet", href="./style.css")
+    body
+        .start
+            .play-btn.start-btn
+                svg(width="10px" height="12px" viewBox="0 0 10 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink")
+                    g(id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round")
+                        g(id="iPhone-8" transform="translate(-315.000000, -321.000000)" fill="#5306FC" fill-rule="nonzero" stroke="#5306FC" stroke-width="2")
+                            polygon(id="Path-2" points="316 322 316 332 324 327")
+        .container.hide           
+            header
+                .back-wrapper
+                    svg(width='16', height='13', viewBox='0 0 16 13', xmlns='http://www.w3.org/2000/svg')
+                        g(fill-rule='nonzero', stroke='#FFF', stroke-width='2', fill='none', stroke-linecap='round')
+                            path(stroke-linejoin='round', d='M14.362 6.55H1.712l5.565-5.035')
+                            path(d='M1.932 6.696l5.255 4.693')
+
+
+                .title-play-wrapper
+                    .title-wrapper
+                        h1 The Mountain Between Us
+                        .rating
+                            -for(var i = 0; i < 5;i++)
+                                svg(width="14px" height="13px" viewBox="0 0 14 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink")
+                                    g(id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round")
+                                        g(id="iPhone-8" transform="translate(-30.000000, -288.000000)" fill="#FFBE21" fill-rule="nonzero" stroke="#FFBE21")
+                                            polygon(id="Path-6" points="37.0237799 288 34.8880865 291.520825 31 292.6301 33.5682256 295.563721 33.3508619 300 36.8901422 298.556515 40.7190666 300 40.5751853 295.647287 43 292.723347 39.3491895 291.632776")
+                    .play-btn
+                        svg(width="10px" height="12px" viewBox="0 0 10 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink")
+                            g(id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round")
+                                g(id="iPhone-8" transform="translate(-315.000000, -321.000000)" fill="#5306FC" fill-rule="nonzero" stroke="#5306FC" stroke-width="2")
+                                    polygon(id="Path-2" points="316 322 316 332 324 327")
+            .content-wrapper
+                .content
+                    .details-wrapper
+                        -var details = ['length', 'language', 'rating'];
+                        -var desc = ['1h 52m', 'english', '15+'];
+                        -for(var i = 0; i < details.length;i++)
+                            .detail
+                                span.detail-title= details[i]
+                                span.detail-content= desc[i]
+                    .gallery-wrapper
+                        span.detail-title gallery
+                        .gallery
+                            -var imgs = ['./images/gallery-1.png', './images/gallery-2.png', './images/gallery-1.png'];
+                            -for(var i = 0; i < imgs.length;i++)
+                                img(src=`${imgs[i]}` alt='gallery')
+                    .inf-wrapper
+                        span.detail-title Genre
+                        span.detail-content Action, Adventure
+                    .inf-wrapper
+                        span.detail-title Director
+                        span.detail-content Hany Abu-Assad
+                    .inf-wrapper
+                        span.detail-title Story
+                        p.detail-content It stars Idris Elba and Kate Winslet as a surgeon and a journalist, respectively, who survive a plane crash, with a dog, and are stranded in High Uintas Wilderness with injuries and harsh weather conditions.
+            nav
+                svg(width='26', height='21', viewBox='0 0 26 21', xmlns='http://www.w3.org/2000/svg')
+                    g(fill='#5306FC', fill-rule='nonzero')
+                        path(d='M21.661 2.59c-.1-.599-.569-1.061-1.155-1.14a65.488 65.488 0 0 0-17.904 0 1.367 1.367 0 0 0-1.156 1.14 37.66 37.66 0 0 0 0 12.956c.101.6.57 1.062 1.156 1.14a65.487 65.487 0 0 0 17.906 0 1.367 1.367 0 0 0 1.155-1.14 37.677 37.677 0 0 0-.002-12.955zM8 11.83V6.307a.955.955 0 0 1 .47-.782.902.902 0 0 1 .894-.007l5.262 2.762a.878.878 0 0 1 .483.79.878.878 0 0 1-.483.789l-5.262 2.761a.902.902 0 0 1-.894-.007.955.955 0 0 1-.47-.781z')
+                        path(d='M24.55 5.454c-.1-.6-.569-1.062-1.155-1.14a65.488 65.488 0 0 0-17.904 0 1.367 1.367 0 0 0-1.156 1.14 37.66 37.66 0 0 0 0 12.955c.101.6.57 1.062 1.156 1.141a65.487 65.487 0 0 0 17.905 0 1.367 1.367 0 0 0 1.156-1.14 37.677 37.677 0 0 0-.002-12.956zm-13.661 9.24V9.17a.955.955 0 0 1 .47-.782.902.902 0 0 1 .893-.007l5.263 2.761a.878.878 0 0 1 .483.79.878.878 0 0 1-.483.79l-5.263 2.761a.902.902 0 0 1-.893-.007.955.955 0 0 1-.47-.782z', opacity='.2')
+                svg(width='24', height='26', viewBox='0 0 24 26', xmlns='http://www.w3.org/2000/svg')
+                    g(fill='#C2C2CB', fill-rule='nonzero')
+                        path(d='M21.105.614a.482.482 0 0 0-.69-.538L.752 10.418a1.407 1.407 0 0 0-.096 2.434l4.377 2.775a.24.24 0 0 0 .288-.023L16.992 5.138a.239.239 0 0 1 .329 0 .24.24 0 0 1 .018.33L8.012 17.202a.241.241 0 0 0 .06.354l6.174 3.918a1.392 1.392 0 0 0 2.103-.862L21.105.614zM6.61 18.472a.24.24 0 0 0-.37.203v3.452c0 .39.234.74.593.89a.958.958 0 0 0 1.046-.21l1.937-1.942a.242.242 0 0 0-.041-.373l-3.165-2.02z')
+                        path(d='M23.985 3.503a.482.482 0 0 0-.69-.538L3.632 13.307a1.407 1.407 0 0 0-.096 2.434l4.377 2.775a.24.24 0 0 0 .288-.023L19.872 8.027a.239.239 0 0 1 .329 0 .24.24 0 0 1 .018.33L10.892 20.09a.241.241 0 0 0 .06.354l6.174 3.918a1.392 1.392 0 0 0 2.103-.862l4.756-19.998zM9.49 21.36a.24.24 0 0 0-.37.204v3.452c0 .39.234.74.593.89a.958.958 0 0 0 1.046-.21l1.937-1.942a.242.242 0 0 0-.041-.373L9.49 21.36z', opacity='.2')
+
+                .buy-btn
+                    svg(width='22', height='28', viewBox='0 0 22 28', xmlns='http://www.w3.org/2000/svg')
+                        g(fill-rule='nonzero', stroke='#FFF', stroke-width='2', fill='none')
+                            path(d='M6.82 1.19L1.48 22.603l14.209 3.542 5.34-21.414-3.547-.884C15.974 4.903 14.62 5.28 13.42 4.98c-1.2-.3-2.193-1.262-2.98-2.89L6.82 1.19z', stroke-linejoin='round')
+                            path(d='M5.268 7.781l2.426.605M16.912 10.684l2.425.605M11.09 9.233l2.426.605', stroke-linecap='round')
+                            g(stroke-linecap='round')
+                            path(d='M8.125 16.763l4.582 1.142M10.988 15.043l-1.143 4.582')
+                
+                svg(width='26', height='24', viewBox='0 0 26 24', xmlns='http://www.w3.org/2000/svg')
+                    g(fill='#C2C2CB', fill-rule='nonzero')
+                        path(d='M23.111 9.633c0-.637-.254-1.247-.705-1.697a2.411 2.411 0 0 0-1.702-.703h-6.078a.241.241 0 0 1-.228-.315 8.313 8.313 0 0 0 .501-4.231C14.333.676 13.133.095 12.194.225a1.921 1.921 0 0 0-1.601 1.968c0 2.636-2.05 5.516-3.885 6.778a.48.48 0 0 0-.208.396v9.711c0 .23.164.428.39.471.344.067.656.13.95.192 1.296.308 2.624.46 3.956.453h6.26c1.884 0 2.166-1.056 2.166-1.68 0-.331-.076-.658-.223-.955a2.155 2.155 0 0 0 .963-2.88 2.161 2.161 0 0 0 1.186-1.926c0-.36-.09-.714-.263-1.03a2.399 2.399 0 0 0 1.226-2.09zM5.056 9.393c0-.53-.432-.96-.963-.96H.963a.961.961 0 0 0-.963.96v10.56c0 .53.431.96.963.96h3.13c.531 0 .963-.43.963-.96V9.393zm-1.445 8.88a.721.721 0 1 1-1.442-.003.721.721 0 0 1 1.442.003z')
+                        path(d='M26 12.894c0-.611-.25-1.198-.695-1.63a2.408 2.408 0 0 0-1.678-.675h-5.989a.24.24 0 0 1-.192-.096.225.225 0 0 1-.033-.207 7.8 7.8 0 0 0 .494-4.064c-.558-1.932-1.74-2.49-2.666-2.365-.94.155-1.615.964-1.578 1.89 0 2.533-2.02 5.3-3.828 6.512a.458.458 0 0 0-.205.38v9.33c0 .22.16.41.384.452.339.064.646.124.937.184 1.277.296 2.585.442 3.898.435h6.169c1.857 0 2.135-1.015 2.135-1.614 0-.318-.075-.632-.22-.917 1.043-.513 1.466-1.747.949-2.767a2.071 2.071 0 0 0 1.169-1.85c0-.346-.088-.686-.26-.989A2.295 2.295 0 0 0 26 12.894zM7.704 13.366c0-.49-.41-.886-.917-.886H3.806c-.507 0-.917.397-.917.886v9.748c0 .49.41.886.917.886h2.98c.507 0 .918-.397.918-.886v-9.748zm-1.376 8.197a.677.677 0 0 1-.688.665.677.677 0 0 1-.688-.665c0-.367.308-.665.688-.665.38 0 .688.298.688.665z', opacity='.202')
+
+                svg(width='26', height='26', viewBox='0 0 26 26', xmlns='http://www.w3.org/2000/svg')
+                    g(fill='#C2C2CB', fill-rule='nonzero')
+                        path(d='M19.356 22.99a3.611 3.611 0 0 0 3.583-4.058L21.42 6.772v-.006a.645.645 0 0 0-.026-.12v-.01l-.006-.017-1.006-2.824a1.665 1.665 0 0 0-1.508-1.027h-.963a.722.722 0 0 0 0 1.445h.963a.225.225 0 0 1 .166.121l.525 1.484a.24.24 0 0 1-.222.32h-2.634a.24.24 0 0 1-.24-.24v-.963a4.815 4.815 0 1 0-9.63 0v.963a.24.24 0 0 1-.24.24H3.86a.24.24 0 0 1-.222-.333l.609-1.439c.03-.079.099-.137.182-.153h.963a.722.722 0 1 0 0-1.444H4.43c-.644.017-1.222.4-1.49.987L1.745 6.577v.008a.74.74 0 0 0-.018.049v.014a.77.77 0 0 0-.027.123L.17 18.93a3.61 3.61 0 0 0 3.586 4.06h15.6zM7.81 12.75a1.942 1.942 0 0 1 3.11-.505l.366.366a.24.24 0 0 0 .34 0l.367-.366a1.942 1.942 0 0 1 2.746 2.747l-3.11 3.244a.24.24 0 0 1-.347 0l-3.108-3.244a1.943 1.943 0 0 1-.364-2.242zm.952-7.815a2.889 2.889 0 0 1 5.778 0v.963a.24.24 0 0 1-.241.24H9.004a.24.24 0 0 1-.241-.24v-.963z')
+                        path(d='M22.244 25.88a3.611 3.611 0 0 0 3.584-4.06L24.309 9.66v-.005a.645.645 0 0 0-.026-.12v-.01l-.006-.017-1.006-2.824a1.665 1.665 0 0 0-1.508-1.027H20.8a.722.722 0 0 0 0 1.445h.963a.225.225 0 0 1 .166.121l.525 1.484a.24.24 0 0 1-.222.32h-2.634a.24.24 0 0 1-.24-.24v-.963a4.815 4.815 0 1 0-9.63 0v.963a.24.24 0 0 1-.24.24H6.748a.24.24 0 0 1-.221-.333l.609-1.439c.03-.079.099-.137.182-.153h.962a.722.722 0 1 0 0-1.445H7.32c-.645.018-1.222.401-1.49.987L4.634 9.466v.008a.74.74 0 0 0-.018.049v.014a.77.77 0 0 0-.027.122L3.059 21.821a3.61 3.61 0 0 0 3.585 4.059h15.6zM10.7 15.639a1.942 1.942 0 0 1 3.11-.505l.367.366a.24.24 0 0 0 .34 0l.367-.366a1.942 1.942 0 0 1 2.746 2.747l-3.11 3.244a.24.24 0 0 1-.347 0l-3.109-3.244a1.943 1.943 0 0 1-.364-2.242zm.953-7.815a2.889 2.889 0 1 1 5.778 0v.963a.24.24 0 0 1-.241.24h-5.296a.24.24 0 0 1-.241-.24v-.963z', opacity='.2')
+
+        script(src="./all.js")
+
+
+
+

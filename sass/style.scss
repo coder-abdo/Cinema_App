@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+// variables
+$grey: #B3B3B5;
+$black: #24262A;
+
+// mixins
+@mixin flex($dir:row, $js:flex-start, $ai: flex-start) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $js;
+    align-items: $ai;
+}
+// General Styles
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    color: $black;
+    text-transform: capitalize;
+}
+body {
+    background-color: lighten(#5306FC, 10%);
+    padding: 1rem 2rem;
+    position: relative;
+}
+.container{
+    width: 36rem;
+    overflow-x: hidden;
+    margin: auto;
+    border-radius: 5px;
+    background-color: #fff;
+    &.hide {
+        max-height: 100vh;
+        width: 36rem;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+}
+html {
+    font-size: 62.5%;
+}
+// start section
+.start {
+    min-height: 100vh;
+    min-width: 40rem;
+    position: absolute;
+    background-color: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+    @include flex(row, center, center);
+    z-index: 100;
+    border-radius: 5px;
+    box-shadow: 0 0 1.5rem 5px rgba(#000, .15) ;
+    .start-btn {
+        position: relative;
+        right: 0;
+    }
+    &.hide-start {
+        display: none;
+    }
+}
+// header
+header {
+    height: 32.7rem;
+    width: 100%;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(#706DDE, .3),
+        rgba(#706DDE, .1)
+    ),
+                      url(./images/cover.png);
+    background-size: cover;
+    padding: 3rem;
+    @include flex(column, space-between);
+    position: relative;
+}
+.title-play-wrapper {
+    @include flex(row,flex-start, flex-end);
+    .title-wrapper {
+        margin-bottom: 2rem;
+        h1 {
+            color: #fff;
+            font-size: 2.8rem;
+            max-width: 20rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+        .rating {
+            svg:last-child{
+                opacity: 0.5;
+            }
+        }
+    }
+}
+.play-btn {
+    box-shadow: 0 .5rem 1.4rem 0 rgba(83,6,252,0.17);
+    background-color: #FFF;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    @include flex(row, center, center);
+    position: absolute;
+    bottom: -2.5rem;
+    right: 3rem;
+    &:hover {
+        cursor: pointer;
+    }
+}
+// content wrapper
+.content-wrapper {
+    padding: 3.7rem 0 0 3rem;
+}
+// detail
+.details-wrapper {
+    @include flex(row, space-between, center);
+    max-width: 25rem;
+    margin-bottom: 3rem;
+    .detail {
+        @include flex(column);
+        &:not(:last-child){
+            position: relative;
+            &::after {
+                position: absolute;
+                display: block;
+                content: '';
+                right: -2.8rem;
+                width: 1px;
+                height: 3.3rem;
+                background-color: lighten($grey, 20%);
+            }
+        }
+    }
+}
+.detail-title{
+    font-size: 1.2rem;
+    color: $grey;
+    margin-bottom: 0.5rem;
+}
+.detail-content {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+// gallery
+.gallery {
+    width: 100%;
+    height: 14rem;
+    @include flex;
+    overflow-x: scroll;
+    padding-right: 2rem;
+    margin-top: 1rem;
+    img {
+        height: 10.7rem;
+        margin-right: 0.5rem;
+        border-radius: 1rem;
+        box-shadow: 0px 2rem 3.5rem -1rem rgba(#000, .25);
+    }
+}
+// information wrapper
+.inf-wrapper {
+    @include flex(column);
+    margin-bottom: 2rem;
+
+    p.detail-content {
+        line-height: 2.1rem;
+        width: 31.6rem;
+        height: 16rem;
+    }
+}
+
+// Tab Bar
+nav {
+    position: fixed;
+    bottom: 0;
+    @include flex(row, space-around, center);
+    height: 5rem;
+    width: 36rem;
+    box-shadow: 0 -.4rem 2.5rem 0 rgba(0,0,0,0.12);
+    padding: 0 1rem;
+
+    .buy-btn {
+        width: 5rem;
+        height: 5rem;
+        background-image: linear-gradient(-225deg, #FFC518 0%, #FFAC0F 100%);
+        border-radius: 50%;
+        box-shadow: 0 .4rem 1.4rem 0 rgba(255,189,21,0.53);
+        @include flex(row, center, center);
+        margin-bottom: 2rem;
+    }
+}
